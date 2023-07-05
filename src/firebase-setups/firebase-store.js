@@ -10,10 +10,9 @@ import {
   signOut,
   updatePassword,
 } from "firebase/auth";
-import firebaseConfig from "./config";
 
 export class FirebaseStore {
-  constructor() {
+  constructor(firebaseConfig) {
     this.firebase = initializeApp(firebaseConfig);
     this.auth = getAuth();
   }

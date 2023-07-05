@@ -1,8 +1,7 @@
 import { initializeApp } from "firebase/app";
 import { GoogleAuthProvider, createUserWithEmailAndPassword, getAuth, onAuthStateChanged, sendPasswordResetEmail, signInWithEmailAndPassword, signInWithPopup, signOut, updatePassword } from "firebase/auth";
-import firebaseConfig from "./config";
 export class FirebaseStore {
-  constructor() {
+  constructor(firebaseConfig) {
     this.firebase = initializeApp(firebaseConfig);
     this.auth = getAuth();
   }
