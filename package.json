@@ -1,6 +1,14 @@
 {
   "name": "firebase-auth-setup",
-  "version": "0.1.8",
+  "version": "0.1.9",
+  "repository": {
+    "url": "https://github.com/serikshaikamalov/firebase-auth-setup"
+  },
+  "author": {
+    "name": "Serik Shaikamalov",
+    "email": "serik.shaikamalov@gmail.com",
+    "url": "http://serik.frontends.kz"
+  },
   "babel": {
     "presets": [
       "@babel/preset-react"
