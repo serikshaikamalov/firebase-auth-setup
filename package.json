@@ -1,8 +1,25 @@
 {
   "name": "firebase-auth-setup",
-  "version": "0.1.1",  
-  "peerDependencies": {
-    "firebase": "^9.17.2",
-    "react": "^18.2.0"
+  "version": "0.1.2",
+  "babel": {
+    "presets": [
+      "@babel/preset-react"
+    ]
+  },
+  "scripts": {
+    "start": "react-scripts start",
+    "build": "react-scripts build",
+    "test": "react-scripts test",
+    "eject": "react-scripts eject",
+    "publish:npm": "rm -rf dist && mkdir dist &&  babel src/firebase-setups -d dist --copy-files"
+  },
+  "dependencies": {
+    "react": "^18.2.0",
+    "react-dom": "^18.2.0",
+    "react-scripts": "5.0.1"
+  },
+  "devDependencies": {
+    "@babel/cli": "^7.11.5",
+    "@babel/preset-react": "^7.10.4"
   }
 }
