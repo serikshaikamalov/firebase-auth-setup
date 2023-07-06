@@ -1,0 +1,16 @@
+html, body{
+    margin: 1rem;
+    padding: 0;
+}
+ul {
+  list-style: none;
+}
+nav#user-menu{
+    border: 1px solid #ddd;
+    padding: 0.5rem;
+}
+nav#user-menu ul{
+    display: flex;
+    gap: 1rem;
+    justify-content: end;
+}
