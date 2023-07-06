@@ -15,5 +15,6 @@ You can use this library to easily integrate with Firebase Authorization for you
 We already prepared a demo. Just run on a terminal:
 
 ```js
+npm install
 npm run start
 ```
