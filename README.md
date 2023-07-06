@@ -1,6 +1,6 @@
-# Sigin with Firebase Authentication
+# Sign-in with Firebase Authentication
 
-You can use this library to integrate with Firebase on your React app.
+You can use this library to easily integrate with Firebase Authorization for your React app.
 
 # How to use
 
