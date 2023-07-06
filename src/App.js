@@ -6,9 +6,11 @@ import "./index.css";
 
 function App({ firebaseStore }) {
   const [authUser, setAuthUser] = useState(null);
+  const [loading, setLoading] = useState(true);
 
   useEffect(() => {
     if (firebaseStore) {
+      setLoading(true);
       firebaseStore.onAuthStateChanged((_user) => {
         console.log("Firebase Auth Subscription: ", _user);
 
@@ -20,15 +22,13 @@ function App({ firebaseStore }) {
         }
 
         setAuthUser(_user);
+        setLoading(false);
       });
     }
   }, []);
 
-  if(!authUser) return <div>Loading...</div>
-
-  if (authUser) {
-    return <Header authUser={authUser} />;
-  }
+  if (loading) return <div>Loading...</div>;
+  if (authUser) return <Header authUser={authUser} />;
 
   return (
     <div>
