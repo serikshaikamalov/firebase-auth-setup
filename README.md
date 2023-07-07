@@ -12,7 +12,7 @@ npm i firebase-auth-setup
 
 ## How to use
 
-PS: Before starting please prepare the config file that you can find on your [Firebase account page](https://console.firebase.google.com/). Copy content of the firebase config and put it inside .env.local file(first you will be needed to rename .env.local-sample file to .env.local)
+PS: Before starting please prepare the config file that you can find on your [Firebase account page](https://console.firebase.google.com/). Copy the content of the firebase config and put it inside .env.local file(first you will be needed to rename the .env.local-sample file to .env.local)
 
 1. Wrap your app component with FirebaseContext.Provider and pass firebase global object with firebaseConfig. In index.js
 
@@ -56,18 +56,18 @@ Use them on your react component:
     title="Login with Facebook"
     onSuccess={onSuccessLogin}
     onFailure={onLoginFailure}
-    />
+/>
 ```
 
-You can easily predefine props by passing title, onSuccess, onFailure handlers. All props are OPTIONAL
-Here:
-title - title of a button
-onSuccess - your custom function that will be fired after loggin in
-onFailure - your custom function which will be fired when something happens during sigin-in process
+You can easily predefine props by passing title, onSuccess and onFailure handler. All props are OPTIONAL\
+Here:\
+title - the label of a button\
+onSuccess - your custom function that will be fired after logging in\
+onFailure - your custom function which will be fired when something happens during sig-in process\
 
 ## Demo
 
-We already prepared a demo. Just run on a terminal:
+We already prepared a demo. Just clone the repo and run:
 
 ```js
 npm install
