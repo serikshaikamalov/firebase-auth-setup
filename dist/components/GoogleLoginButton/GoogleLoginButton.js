@@ -15,12 +15,12 @@ const GoogleLoginButton = ({
       onSuccess && onSuccess(firebaseAuthResponse);
     } catch (ex) {
       console.error("Firebase: Google signin ex: ", ex);
-      onFailure && onFailure();
+      onFailure && onFailure(ex);
     }
   };
-  return /*#__PURE__*/React.createElement("div", {
+  return /*#__PURE__*/React.createElement("button", {
     onClick: sigin,
-    className: "m-y-1"
-  }, /*#__PURE__*/React.createElement("button", null, title));
+    className: "google-login-btn"
+  }, title);
 };
 export default withFirebase(GoogleLoginButton);
