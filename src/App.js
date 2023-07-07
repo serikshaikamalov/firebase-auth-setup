@@ -1,12 +1,15 @@
 import { useEffect, useState } from "react";
-import GoogleLoginButton from "./components/Login/GoogleLoginButton";
+import GoogleLoginButton from "./components/GoogleLoginButton/GoogleLoginButton";
 import { withFirebase } from "./firebase-setups";
 import Header from "./components/Header/Header";
 import "./index.css";
-import FacebookLoginButton from "./components/Login/FacebookLoginButton";
+import FacebookLoginButton from "./components/FacebookLoginButton/FacebookLoginButton";
 import EmailPasswordLogin from "./components/EmailPasswordLogin/EmailPasswordLogin";
 import EmailPasswordSignup from "./components/EmailPasswordSignup/EmailPasswordSignup";
 
+/**
+ * @example: How to use firebase-auth-setup
+ */
 function App({ firebaseStore }) {
   const [authUser, setAuthUser] = useState(null);
   const [loading, setLoading] = useState(true);
@@ -36,7 +39,15 @@ function App({ firebaseStore }) {
   return (
     <div>
       <h3>Example: How to use Firebase Auth</h3>
-      <GoogleLoginButton />
+      <GoogleLoginButton
+        title="Login with Google"
+        onSuccess={() => {
+          console.log("Do other staff");
+        }}
+        onFailure={() => {
+          console.log("Something happend while logging in");
+        }}
+      />
       <FacebookLoginButton />
       <EmailPasswordSignup />
       <EmailPasswordLogin />
