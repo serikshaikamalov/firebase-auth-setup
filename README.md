@@ -2,6 +2,10 @@
 
 You can use this library to easily integrate with Firebase Authorization for your React app.
 
+<img width="395" alt="Screenshot 2023-07-07 at 17 26 55" src="https://github.com/serikshaikamalov/firebase-auth-setup/assets/11631958/d71aa5a2-cba8-467a-9c2c-9027f07bc00d">
+
+
+
 ## Installation
 
 ```
