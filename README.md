@@ -10,7 +10,7 @@ npm i firebase-auth-setup
 
 # How to use
 
-PS: Before starting please prepare the config file that you can find on your Firebase account page.
+PS: Before starting please prepare the config file that you can find on your [Firebase account page](https://console.firebase.google.com/). Copy content of the firebase config and put it inside .env.local file(first you will be needed to rename .env.local-sample file to .env.local)
 
 1. Wrap your app component with FirebaseContext.Provider and pass firebase global object with firebaseConfig. In index.js
 
