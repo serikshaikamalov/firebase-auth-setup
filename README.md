@@ -8,7 +8,7 @@ You can use this library to easily integrate with Firebase Authorization for you
 npm i firebase-auth-setup
 ```
 
-# How to use
+## How to use
 
 PS: Before starting please prepare the config file that you can find on your [Firebase account page](https://console.firebase.google.com/). Copy content of the firebase config and put it inside .env.local file(first you will be needed to rename .env.local-sample file to .env.local)
 
@@ -64,9 +64,7 @@ const GoogleLoginButton = ({ firebaseStore }) => {
 export default withFirebase(GoogleLoginButton);
 ```
 
-4. Enjoy!
-
-# Sample
+## Demo
 
 We already prepared a demo. Just run on a terminal:
 
@@ -74,3 +72,7 @@ We already prepared a demo. Just run on a terminal:
 npm install
 npm run start
 ```
+
+## Where can you reach me?
+
+To stay connected follow me on Github: [Serik](https://github.com/serikshaikamalov)
