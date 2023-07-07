@@ -5,6 +5,12 @@ html, body{
 ul {
   list-style: none;
 }
+
+.m-y-1{
+    margin-top: 4px;
+    margin-bottom: 4px;
+}
+
 nav#user-menu{
     border: 1px solid #ddd;
     padding: 0.5rem;

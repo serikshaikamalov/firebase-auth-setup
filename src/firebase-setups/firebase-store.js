@@ -1,5 +1,6 @@
 import { initializeApp } from "firebase/app";
 import {
+  FacebookAuthProvider,
   GoogleAuthProvider,
   createUserWithEmailAndPassword,
   getAuth,
@@ -29,6 +30,11 @@ export class FirebaseStore {
 
   signInWithGoogle = async () => {
     const provider = new GoogleAuthProvider();
+    const firebaseAuthResponse = await signInWithPopup(this.auth, provider);
+    return firebaseAuthResponse;
+  };
+  signInWithFacebook = async () => {
+    const provider = new FacebookAuthProvider();
     const firebaseAuthResponse = await signInWithPopup(this.auth, provider);
     return firebaseAuthResponse;
   };

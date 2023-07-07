@@ -3,6 +3,9 @@ import GoogleLoginButton from "./components/Login/GoogleLoginButton";
 import { withFirebase } from "./firebase-setups";
 import Header from "./components/Header/Header";
 import "./index.css";
+import FacebookLoginButton from "./components/Login/FacebookLoginButton";
+import EmailPasswordLogin from "./components/EmailPasswordLogin/EmailPasswordLogin";
+import EmailPasswordSignup from "./components/EmailPasswordSignup/EmailPasswordSignup";
 
 function App({ firebaseStore }) {
   const [authUser, setAuthUser] = useState(null);
@@ -34,6 +37,9 @@ function App({ firebaseStore }) {
     <div>
       <h3>Example: How to use Firebase Auth</h3>
       <GoogleLoginButton />
+      <FacebookLoginButton />
+      <EmailPasswordSignup />
+      <EmailPasswordLogin />
     </div>
   );
 }
