@@ -1,5 +1,5 @@
 import { initializeApp } from "firebase/app";
-import { GoogleAuthProvider, createUserWithEmailAndPassword, getAuth, onAuthStateChanged, sendPasswordResetEmail, signInWithEmailAndPassword, signInWithPopup, signOut, updatePassword } from "firebase/auth";
+import { FacebookAuthProvider, GoogleAuthProvider, createUserWithEmailAndPassword, getAuth, onAuthStateChanged, sendPasswordResetEmail, signInWithEmailAndPassword, signInWithPopup, signOut, updatePassword } from "firebase/auth";
 export class FirebaseStore {
   constructor(firebaseConfig) {
     this.firebase = initializeApp(firebaseConfig);
@@ -12,6 +12,11 @@ export class FirebaseStore {
   signUp = (email, password) => createUserWithEmailAndPassword(this.auth, email, password);
   signInWithGoogle = async () => {
     const provider = new GoogleAuthProvider();
+    const firebaseAuthResponse = await signInWithPopup(this.auth, provider);
+    return firebaseAuthResponse;
+  };
+  signInWithFacebook = async () => {
+    const provider = new FacebookAuthProvider();
     const firebaseAuthResponse = await signInWithPopup(this.auth, provider);
     return firebaseAuthResponse;
   };
