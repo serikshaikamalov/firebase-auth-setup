@@ -41,11 +41,13 @@ function App({ firebaseStore }) {
       <h3>Example: How to use Firebase Auth</h3>
       <GoogleLoginButton
         title="Login with Google"
-        onSuccess={() => {
+        onSuccess={(_user) => {
+          // returns signed google user
           console.log("Do other staff");
         }}
-        onFailure={() => {
-          console.log("Something happend while logging in");
+        onFailure={(_ex) => {
+          // Returns exeption
+          console.log("Something happened while logging in");
         }}
       />
       <FacebookLoginButton />

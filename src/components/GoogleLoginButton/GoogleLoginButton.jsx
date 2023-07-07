@@ -16,14 +16,14 @@ const GoogleLoginButton = ({
       onSuccess && onSuccess(firebaseAuthResponse);
     } catch (ex) {
       console.error("Firebase: Google signin ex: ", ex);
-      onFailure && onFailure();
+      onFailure && onFailure(ex);
     }
   };
 
   return (
-    <div onClick={sigin} className="m-y-1">
-      <button>{title}</button>
-    </div>
+    <button onClick={sigin} className="google-login-btn">
+      {title}
+    </button>
   );
 };
 

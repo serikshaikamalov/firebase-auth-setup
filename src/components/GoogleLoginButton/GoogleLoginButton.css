@@ -1,8 +1,8 @@
-#google-login-btn {
+.google-login-btn {
   margin: 1rem 0;
   background-color: #4285f4;
   color: #fff;
-  height: 50px;
+  height: 40px;
   border: 0;
   padding: 0 1rem;
   border-radius: 4px;
