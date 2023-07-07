@@ -33,8 +33,12 @@ export class FirebaseStore {
     const firebaseAuthResponse = await signInWithPopup(this.auth, provider);
     return firebaseAuthResponse;
   };
-  signInWithFacebook = async () => {
+  signInWithFacebook = async (permissions) => {
     const provider = new FacebookAuthProvider();
+
+    if (permissions && permissions.length > 0) {
+      permissions.forEach((p) => provider.addScope(p));
+    }
     const firebaseAuthResponse = await signInWithPopup(this.auth, provider);
     return firebaseAuthResponse;
   };
