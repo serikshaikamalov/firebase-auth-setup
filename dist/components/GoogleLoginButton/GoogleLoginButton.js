@@ -1,6 +1,15 @@
 import React from "react";
+import "./style.css";
 import { withFirebase } from "../../firebase-setups";
-import "./GoogleLoginButton.css";
+
+/**
+ *
+ * @param {*} title - optional. Label of the button
+ * @param onSuccess - optional. Your custom function which will be fired after loggin in
+ * @param onFailure - optional. your custom function which will be fired when something happens during sigin-in process
+ * @param permissions - optional. scopes/permissions
+ * @returns a logged user or exception
+ */
 const GoogleLoginButton = ({
   firebaseStore,
   title = "Login with Google",

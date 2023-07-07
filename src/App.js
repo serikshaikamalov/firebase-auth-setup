@@ -39,18 +39,29 @@ function App({ firebaseStore }) {
   return (
     <div>
       <h3>Example: How to use Firebase Auth</h3>
-      <GoogleLoginButton
-        title="Login with Google"
-        onSuccess={(_user) => {
-          // returns signed google user
-          console.log("Do other staff");
-        }}
-        onFailure={(_ex) => {
-          // Returns exeption
-          console.log("Something happened while logging in");
-        }}
-      />
-      <FacebookLoginButton />
+      <div style={{ gap: "1rem", display: "flex" }}>
+        <GoogleLoginButton
+          title="Login with Google"
+          onSuccess={(_user) => {
+            // returns signed google user
+            console.log("Do other staff");
+          }}
+          onFailure={(_ex) => {
+            console.log("Something happened while logging in");
+          }}
+        />
+        <FacebookLoginButton
+          permissions={["instagram_manage_messages", "instagram_basic"]}
+          title="Login with Facebook"
+          onSuccess={(_user) => {
+            // returns signed facebook user
+            console.log("Do other staff");
+          }}
+          onFailure={(_ex) => {
+            console.log("Something happened while logging in");
+          }}
+        />
+      </div>
       <EmailPasswordSignup />
       <EmailPasswordLogin />
     </div>

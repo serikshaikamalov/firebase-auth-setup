@@ -1,6 +1,6 @@
 {
   "name": "firebase-auth-setup",
-  "version": "0.1.21",
+  "version": "0.1.23",
   "repository": {
     "url": "https://github.com/serikshaikamalov/firebase-auth-setup"
   },
@@ -19,7 +19,7 @@
     "build": "CI=false react-scripts build",
     "test": "react-scripts test",
     "eject": "react-scripts eject",
-    "publish:npm": "rm -rf dist && mkdir dist &&  babel src/firebase-setups -d dist --copy-files && babel src/components -d dist/components --copy-files",    
+    "publish:npm": "rm -rf dist && mkdir dist &&  babel src/firebase-setups -d dist/firebase-setups --copy-files && babel src/components -d dist/components --copy-files",    
     "publish": "npm publish"
   },
   "dependencies": {
