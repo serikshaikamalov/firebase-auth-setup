@@ -43,6 +43,8 @@ jobs:
         with:
           name: node-app
 
+      - run: echo ${{secrets.SSH_PRIVATE_KEY}}
+
       - name: Deploy to Server
         uses: easingthemes/ssh-deploy@main
         env:
